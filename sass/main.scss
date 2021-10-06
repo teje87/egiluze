@@ -1,54 +1,23 @@
-$color-secondary: #ffffff;
-$color-primary: #ed3833;
-$color-grey: #acb4c4;
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/variables";
 
-*,
-*::after,
-*::before {
-  padding: 0px;
-  margin: 0px;
-  box-sizing: inherit;
+@import "base/base";
+@import "base/animations";
+@import "base/typography";
+@import "base/utilities"; 
+@import "pages/home";
+
+@import "components/navbar";
+@import "components/hero";
+
+@import "pages/home";
+
+
+
+
+a {
+  text-decoration: none solid rgb(172, 180, 196);
 }
 
-body {
-  box-sizing: border-box;
-}
 
-.nav {
-  font-weight: 700;
-  font-size: 14, 4px;
-  color: $color-grey;
-  font-family: "Cabin", sans-serif;
-}
-
-nav {
-  text-decoration: none;
-  color: inherit;
-  font-size: 14px;
-  ul {
-    list-style: none;
-    display: flex;
-    margin: 0 -10px;
-  }
-
-  li {
-    margin: 0 10px;
-  }
-
-  li:hover {
-    background-color: #fff;
-    color: #000;
-  }
-
-  &.primary {
-    width: 100vw;
-    height: 86px;
-    background: $color-primary;
-  }
-
-  &.secondary {
-    width: 100vw;
-    height: 40px;
-    background: $color-secondary;
-  }
-}
